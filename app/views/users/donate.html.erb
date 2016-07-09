@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>DONATE</title>
+	<style>
+	body
+	{
+		background-image: url(<%=image_path("charity.jpg")%>);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		color:white;
+	}
+
+	</style>
+</head>
+
+<header>
+		<nav class="navbar navbar-default navbar-fixed-top" id="mynavbar" >
+	<div class="navbar-header">
+	<button type="button" data-target="#navbarcontent" data-toggle="collapse" class="navbar-toggle">
+	<span class="sr-only"> Toggle navigation </span>
+	  <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                
+	</button>
+
+
+
+	
+	<a href="ngo.html" class="navbar-brand">MTP </a>
+	</div>
+
+	<!-- NAVBAR CONTENT -->
+	<div id="navbarcontent" class="navbar-collapse collapse">
+	<ul class="nav navbar-nav navbar-right">
+		<li ><a  href="ngo.html">HOME</a></li>
+		<li><a  href="#about">ABOUTUS </a></li>
+		<li class="dropdown active">
+
+		<a class="dropbtn" onmouseover="showdrop()" href="" data-toggle="dropdown"  >CONTRIBUTE</a>
+		<ul class="dropdown-menu" id="mydropdown">
+		<li><a href="volunteer.html">Volunteer</a></li>
+		<li><a href="#">Work for Ngo</a></li>
+		<li class="active"><a href="donate.html">DONATE</a></li>
+		
+		</ul>
+		</li>
+		<li><a  href="#">SPONSORS</a></li>
+		<li><a  href="#">CONTACT&nbsp&nbsp&nbsp&nbsp</a></li>
+	</ul>
+	</div>
+	</nav>
+
+
+
+</header>
+
+
+<body>
+<!-- body -->
+
+
+
+
+ <script type="text/javascript">
+  	
+function showdrop()
+{
+	document.getElementById("mydropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+</body>
+
+</html>

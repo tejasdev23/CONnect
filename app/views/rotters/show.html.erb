@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rotter.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @rotter.email %>
+</p>
+
+<%= link_to 'Edit', edit_rotter_path(@rotter) %> |
+<%= link_to 'Back', rotters_path %>

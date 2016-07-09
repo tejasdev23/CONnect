@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> QUOTE</title>
+	
+
+	<style>
+		.back
+		{
+		
+		
+		}
+		ul li
+		{
+			display:inline;
+		}
+		
+		img
+		{
+
+		}
+		#mynavbar
+	{
+		background-color: #333333;
+	}
+
+		.outer
+		{
+			text-align: center;
+		
+		}
+		.inner
+		{
+		
+
+		}
+
+	</style>
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" id="mynavbar">
+	<div class="navbar-header">
+	<button type="button" data-toggle="collapse" data-target="#navcontent" class="navbar-toggle">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+
+
+	</button> 
+	<a href="ngo.html" class="navbar-brand">MTP </a>
+	</div>
+	
+	<!-- navbar content -->
+	<div class="collapse navbar-collapse" id="navcontent">
+
+	<ul class="navbar-right nav navbar-nav">
+		<li><a  href="ngo.html">HOME</a></li>
+		<li><a  href="#about">ABOUTUS </a></li>
+			<li class="dropdown">
+
+		<a class="dropbtn" onmouseover="showdrop()" href="" data-toggle="dropdown"  >CONTRIBUTE</a>
+		<ul class="dropdown-menu" id="mydropdown">
+		<li class="active"><a href="volunteer.html">Volunteer</a></li>
+		<li><a href="#">Work for Ngo</a></li>
+		<li><a href="donate.html">DONATE</a></li>
+		
+		</ul>
+		</li>
+		<li><a href="#">SPONSORS</a></li>
+		<li><a  href="#">CONTACT&nbsp&nbsp&nbsp&nbsp</a></li>
+	</ul>
+	</div>
+	</nav>
+</header>
+<br>
+<br>
+<br>
+<div class="outer" >
+<div class="inner">
+
+<img  src=<%=image_path("volunteer.jpg")%> style=" height:auto; max-width:100%;" />
+</div>
+<!--
+<div class="inner">
+<img src="rightvolunteer.jpg" style="display: inline-block; height:250px; width:250px;"   />
+</div>
+-->
+</div>
+<div class="back">
+<div >
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis efficitur facilisis. Suspendisse sit amet nunc velit. Phasellus magna risus, tristique id dictum in, posuere gravida arcu. Nullam dignissim interdum nulla, sit amet pulvinar lectus. Pellentesque non leo ac dolor volutpat finibus vel vel odio. Praesent dictum, enim at interdum condimentum, tortor ante tincidunt felis, sed tempor felis est at risus. Sed in luctus felis. Cras feugiat accumsan finibus. Pellentesque ac sollicitudin dui, quis pretium justo. Sed et feugiat nibh, ut rutrum ante. Suspendisse potenti.
+</p>
+<p>
+Curabitur sapien lacus, finibus ac sem vitae, lacinia posuere sapien. In vestibulum sapien tortor, non condimentum augue vestibulum sed. Morbi iaculis ipsum ut nibh dictum, at sollicitudin dui cursus. Aliquam in commodo enim. Suspendisse dapibus pulvinar ipsum, id eleifend justo pharetra eu. Aenean vel odio et tellus viverra tempus vitae ullamcorper nisi. Suspendisse potenti. In porta felis sapien, in lobortis felis pellentesque eu. Cum sociis.
+</p>
+
+
+</div>
+<div style="text-align: center;">
+
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#regvol">Register</button>
+</div>
+</div>
+<!-- Modal -->
+<div id="regvol" class="modal fade" >
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Volunteer For Us</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+        <form>
+        	<label for="naam">NAME</label><input type="text" name="naam"></input>
+
+
+
+
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript">
+  	
+function showdrop()
+{
+	document.getElementById("mydropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>  
+
+</body>
+</html>

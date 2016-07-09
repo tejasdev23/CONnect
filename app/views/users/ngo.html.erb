@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Connecting everyone</title>
+	<style >
+		
+	ul li
+	{
+		display:inline;
+	}
+	#mynavbar
+	{
+		background-color: #333333;
+	}
+	.jumbotron
+	{
+		
+		
+		
+		 
+  
+	}
+	#login .modal-dialog
+	{
+		width: 30%;
+		height: auto;
+	}
+	body
+	{
+		background-image: url(<%=image_path("back.jpg")%>);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+
+	}
+	.who
+	{
+
+	}
+#about
+{
+	text-align: center;
+}
+#what
+{
+	text-align: center;
+}
+#loginsign
+{
+	margin-top: 7px;
+	margin-right: 20px;
+	
+}
+
+	</style>
+
+
+
+</head>
+<body>
+<!-- the navigation bar -->
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" id="mynavbar" >
+	<div class="navbar-header">
+	<button type="button" data-target="#navbarcontent" data-toggle="collapse" class="navbar-toggle">
+	<span class="sr-only"> Toggle navigation </span>
+	  <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                
+	</button>
+
+
+
+	
+	<a href="ngo.html" class="navbar-brand">MTP </a>
+	</div>
+
+	<!-- NAVBAR CONTENT -->
+	<div id="navbarcontent" class="navbar-collapse collapse">
+	<ul class="nav navbar-nav navbar-right">
+		<li><a  href="ngo.html">HOME</a></li>
+		<li><a  href="#about">ABOUTUS </a></li>
+		<li class="dropdown">
+
+		<a class="dropbtn" onmouseover="showdrop()" href="" data-toggle="dropdown"  >CONTRIBUTE</a>
+		<ul class="dropdown-menu " id="mydropdown">
+		<li class="active"><a  href="volunteer.html">Volunteer</a></li>
+		<li><a href="#">Work for Ngo</a></li>
+		<li><a href="donate.html">DONATE</a></li>
+		
+		</ul>
+		</li>
+		<li><a  href="#">SPONSORS</a></li>
+		<li><a  href="#">CONTACT&nbsp&nbsp&nbsp&nbsp</a></li>
+		<li class="btn-group" id="loginsign">
+		
+		<button class= "btn btn-danger" data-toggle="modal" data-target="#login">LOGIN</button>
+		<button class="btn btn-danger" data-toggle="modal" data-target="#signup">SIGN UP</button>
+		</li>
+	</ul>
+	</div>
+	</nav>
+</header>
+	<!-- body -->
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1 style="color:white">VISION: </h1> 
+	
+	<div class="who" >
+	<h2 id="about">WHO ARE WE?</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lorem tellus, nec viverra mauris aliquam imperdiet. Quisque ullamcorper porta mauris, <nav></nav>ec faucibus risus molestie quis. Integer pulvinar odio nec lectus porta, et faucibus elit rutrum. Sed condimentum sodales ex, in consectetur lectus finibus id. Etiam sit amet iaculis justo, vel rutrum erat. Nunc at mattis ligula, non aliquam ipsum. Vivamus molestie justo egestas, tempor urna a, convallis dui. Morbi vel eros non nunc accumsan scelerisque. Praesent ornare libero sit amet tempor malesuada. Praesent eu malesuada nunc. Aliquam erat volutpat. Pellentesque placerat, lorem ut consequat euismod, dolor lacus aliquet magna.</p>
+	</div>
+	<div>
+	<h2 id="what">WHAT WE DO? </h2>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis non justo sed malesuada. Nullam posuere varius eros, ut suscipit orci dignissim at. Integer rutrum ut est nec pretium. Aenean et porta quam. Aliquam cursus lorem et turpis pretium, nec efficitur sem lobortis. Proin nec mi finibus, convallis mauris quis, auctor ante. Nulla ultrices posuere efficitur. Etiam justo lectus, commodo ut quam ac, porta ultricies dui. Vestibulum tellus orci, viverra in dapibus sit amet, feugiat.
+	</p>
+	</div>
+	<span class="icon-bar"> </span>
+	<span class="icon-bar"> </span>
+	<span class="icon-bar"> </span>
+	
+
+<!-- login modal -->
+<div class="modal fade" id="login">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">&times;</button>
+LOGIN
+</div>
+<div class="modal-body"></div>
+
+<form>
+	<div style="text-align: center;">
+	<input type="password" name="pass" placeholder="username"style="text-align: center;">  </input>
+
+	<BR>
+	<br>
+	<input type="password" name="pass" placeholder="password" style="text-align: center;">  </input>
+	</div>
+	<input type="checkbox">Remember me</input>
+
+
+
+
+</form>
+
+<div class="modal-footer">
+	<button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- sign up modal -->
+<div class="modal fade" id="signup">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">&times;</button>
+SIGN UP
+</div>
+<div class="modal-body">
+	<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+     
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<footer>
+	
+	
+
+
+	
+</footer>
+
+
+  <script type="text/javascript">
+  	
+function showdrop()
+{
+	document.getElementById("mydropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+
+</body>
+</html>
